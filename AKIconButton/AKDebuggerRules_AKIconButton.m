@@ -16,12 +16,12 @@
 
 // RULES (General) //
 
-#define MASTER_ON NO
+#define MASTER_ON YES
 
 #define PRINT_CLASS_METHODS YES
 #define PRINT_INSTANCE_METHODS YES
-#define PRINT_SETUP_METHODS NO
-#define PRINT_SETTERS NO
+#define PRINT_SETUP_METHODS YES
+#define PRINT_SETTERS YES
 #define PRINT_GETTERS NO
 
 #define PRINT_METHOD_NAMES YES
@@ -43,7 +43,7 @@
 
 #define PRINT_OTHERCLASSES NO
 #define CLASSES_TO_SKIP [NSSet setWithObjects:@"ExampleClass", nil]
-#define METHODS_TO_SKIP [NSSet setWithObjects:@"exampleMethod", @"scrollView", nil]
+#define METHODS_TO_SKIP [NSSet setWithObjects:@"exampleMethod", nil]
 
 #define METHODS_TO_PRINT [NSSet setWithObjects:nil]
 

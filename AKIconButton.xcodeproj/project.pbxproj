@@ -24,6 +24,8 @@
 		7D3D48AA18342C08003DBAE6 /* AKDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D48A918342C08003DBAE6 /* AKDebugger.m */; };
 		7D3D48AE18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D48AD18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m */; };
 		7D3D48B118342E5F003DBAE6 /* AKIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D48B018342E5F003DBAE6 /* AKIconButton.m */; };
+		7D3D48B4183581EF003DBAE6 /* checkboxChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D48B2183581EF003DBAE6 /* checkboxChecked.png */; };
+		7D3D48B5183581EF003DBAE6 /* checkboxChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D48B3183581EF003DBAE6 /* checkboxChecked@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		7D3D48AD18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKDebuggerRules_AKIconButton.m; sourceTree = "<group>"; };
 		7D3D48AF18342E5F003DBAE6 /* AKIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKIconButton.h; sourceTree = "<group>"; };
 		7D3D48B018342E5F003DBAE6 /* AKIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKIconButton.m; sourceTree = "<group>"; };
+		7D3D48B2183581EF003DBAE6 /* checkboxChecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxChecked.png; sourceTree = "<group>"; };
+		7D3D48B3183581EF003DBAE6 /* checkboxChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkboxChecked@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				7D3D488918342BFA003DBAE6 /* AKIconButtonViewController.m */,
 				7D3D48AF18342E5F003DBAE6 /* AKIconButton.h */,
 				7D3D48B018342E5F003DBAE6 /* AKIconButton.m */,
+				7D3D48B6183581F6003DBAE6 /* Example Icons */,
 				7D3D488B18342BFA003DBAE6 /* Images.xcassets */,
 				7D3D487A18342BFA003DBAE6 /* Supporting Files */,
 			);
@@ -173,6 +178,15 @@
 				7D3D48AD18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m */,
 			);
 			name = AKDebugger;
+			sourceTree = "<group>";
+		};
+		7D3D48B6183581F6003DBAE6 /* Example Icons */ = {
+			isa = PBXGroup;
+			children = (
+				7D3D48B2183581EF003DBAE6 /* checkboxChecked.png */,
+				7D3D48B3183581EF003DBAE6 /* checkboxChecked@2x.png */,
+			);
+			name = "Example Icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,8 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3D48B4183581EF003DBAE6 /* checkboxChecked.png in Resources */,
 				7D3D488C18342BFA003DBAE6 /* Images.xcassets in Resources */,
 				7D3D487E18342BFA003DBAE6 /* InfoPlist.strings in Resources */,
+				7D3D48B5183581EF003DBAE6 /* checkboxChecked@2x.png in Resources */,
 				7D3D488718342BFA003DBAE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

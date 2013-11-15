@@ -17,13 +17,25 @@
 #pragma mark - // DEFINITIONS (Public) //
 
 typedef enum {
+    LEFT = 1,
+    CENTER,
+    RIGHT,
+    JUSTIFIED
+} AKHorizontalAlignment;
+
+typedef enum {
     TOP = 1,
     MIDDLE,
     BOTTOM
-} AKIconButtonLabelPosition;
+} AKVerticalAlignment;
 
 @interface AKIconButton : UIButton
-@property (nonatomic) AKIconButtonLabelPosition labelPosition;
 @property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIFont *fontForText;
 @property (nonatomic, strong) UIImage *icon;
+@property (nonatomic) UIViewContentMode contentModeForIcon;
+@property (nonatomic) BOOL overlaps;
+@property (nonatomic) AKHorizontalAlignment horizontalAlignment;
+@property (nonatomic) AKVerticalAlignment verticalAlignment;
 @end
