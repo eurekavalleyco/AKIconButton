@@ -15,13 +15,17 @@
 
 #pragma mark - // DEFINITIONS (Private) //
 
-#define DEFAULT_TEXT @""
-#define DEFAULT_TEXT_COLOR [UIColor blackColor]
-#define DEFAULT_FONT [UIFont systemFontOfSize:12.0]
-#define DEFAULT_ICON nil
+#define DEFAULT_TEXT self.currentTitle
+#define DEFAULT_TEXT_COLOR self.currentTitleColor
+#define DEFAULT_FONT self.titleLabel.font
+#define DEFAULT_ICON self.imageView.image
+#define DEFAULT_CONTENT_MODE UIViewContentModeScaleAspectFit
 #define DEFAULT_OVERLAPS NO
-#define DEFAULT_HORIZONTAL_ALIGNMENT CENTER
-#define DEFAULT_VERTICAL_ALIGNMENT BOTTOM
+#define DEFAULT_HORIZONTAL_ALIGNMENT self.contentHorizontalAlignment
+#define DEFAULT_VERTICAL_ALIGNMENT self.contentVerticalAlignment
+#define DEFAULT_ADJUSTSFONTSIZETOFITWIDTH YES
+#define DEFAULT_MINIMUM_SCALE_FACTOR 0
+#define DEFAULT_NUMBEROFLINES 1
 
 @interface AKIconButton ()
 @property (nonatomic, strong) UILabel *labelForButton;
@@ -44,6 +48,9 @@
 @synthesize overlaps = _overlaps;
 @synthesize horizontalAlignment = _horizontalAlignment;
 @synthesize verticalAlignment = _verticalAlignment;
+@synthesize adjustsFontSizeToFitWidth = _adjustsFontSizeToFitWidth;
+@synthesize minimumScaleFactorForLabel = _minimumScaleFactorForLabel;
+@synthesize numberOfLinesForLabel = _numberOfLinesForLabel;
 @synthesize labelForButton = _labelForButton;
 @synthesize imageViewForIcon = _imageViewForIcon;
 
@@ -144,7 +151,7 @@
     }
 }
 
-- (void)setHorizontalAlignment:(AKHorizontalAlignment)horizontalAlignment
+- (void)setHorizontalAlignment:(UIControlContentHorizontalAlignment)horizontalAlignment
 {
     if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
     
@@ -155,13 +162,48 @@
     }
 }
 
-- (void)setVerticalAlignment:(AKVerticalAlignment)verticalAlignment
+- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
 {
     if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
     
     if (_verticalAlignment != verticalAlignment)
     {
         _verticalAlignment = verticalAlignment;
+        [self layoutSubviews];
+    }
+}
+
+- (void)setAdjustsFontSizeToFitWidth:(BOOL)adjustsFontSizeToFitWidth
+{
+    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    if (_adjustsFontSizeToFitWidth != adjustsFontSizeToFitWidth)
+    {
+        _adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth;
+        [self.labelForButton setAdjustsFontSizeToFitWidth:adjustsFontSizeToFitWidth];
+    }
+}
+
+- (void)setMinimumScaleFactorForLabel:(CGFloat)minimumScaleFactorForLabel
+{
+    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    if (_minimumScaleFactorForLabel != minimumScaleFactorForLabel)
+    {
+        _minimumScaleFactorForLabel = minimumScaleFactorForLabel;
+        [self.labelForButton setMinimumScaleFactor:minimumScaleFactorForLabel];
+        [self layoutSubviews];
+    }
+}
+
+- (void)setNumberOfLinesForLabel:(NSInteger)numberOfLinesForLabel
+{
+    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    if (_numberOfLinesForLabel != numberOfLinesForLabel)
+    {
+        _numberOfLinesForLabel = numberOfLinesForLabel;
+        [self.labelForButton setNumberOfLines:numberOfLinesForLabel];
         [self layoutSubviews];
     }
 }
@@ -237,35 +279,37 @@
     if (![self.subviews containsObject:self.imageViewForIcon]) [self addSubview:self.imageViewForIcon];
     if (![self.subviews containsObject:self.labelForButton]) [self addSubview:self.labelForButton];
     switch (self.horizontalAlignment) {
-        case LEFT:
+        case UIControlContentHorizontalAlignmentLeft:
             [self.labelForButton setTextAlignment:NSTextAlignmentLeft];
             break;
-        case CENTER:
+        case UIControlContentHorizontalAlignmentCenter:
             [self.labelForButton setTextAlignment:NSTextAlignmentCenter];
             break;
-        case RIGHT:
+        case UIControlContentHorizontalAlignmentRight:
             [self.labelForButton setTextAlignment:NSTextAlignmentRight];
             break;
-        case JUSTIFIED:
+        case UIControlContentHorizontalAlignmentFill:
             [self.labelForButton setTextAlignment:NSTextAlignmentJustified];
             break;
     }
+    [self.labelForButton setAdjustsFontSizeToFitWidth:NO];
     [self.labelForButton sizeToFit];
     CGFloat labelHeight = self.labelForButton.frame.size.height;
     switch (self.verticalAlignment) {
-        case TOP:
+        case UIControlContentVerticalAlignmentTop:
             [self.labelForButton setFrame:CGRectMake(0.0, 0.0, self.bounds.size.width, labelHeight)];
             [self.labelForButton setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin)];
             break;
-        case MIDDLE:
-            [self.labelForButton setFrame:CGRectMake(0.0, (self.bounds.size.height-labelHeight)/2.0, self.bounds.size.width, labelHeight)];
-            [self.labelForButton setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
-            break;
-        case BOTTOM:
+        case UIControlContentVerticalAlignmentBottom:
             [self.labelForButton setFrame:CGRectMake(0.0, self.bounds.size.height-labelHeight, self.bounds.size.width, labelHeight)];
             [self.labelForButton setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin)];
             break;
+        default:
+            [self.labelForButton setFrame:CGRectMake(0.0, (self.bounds.size.height-labelHeight)/2.0, self.bounds.size.width, labelHeight)];
+            [self.labelForButton setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
+            break;
     }
+    [self.labelForButton setAdjustsFontSizeToFitWidth:self.adjustsFontSizeToFitWidth];
     if (self.overlaps)
     {
         [self.imageViewForIcon setFrame:self.bounds];
@@ -273,14 +317,14 @@
     else
     {
         switch (self.verticalAlignment) {
-            case TOP:
+            case UIControlContentVerticalAlignmentTop:
                 [self.imageViewForIcon setFrame:CGRectMake(0.0, self.labelForButton.bounds.size.height, self.bounds.size.width, self.bounds.size.height-self.labelForButton.frame.size.height)];
                 break;
-            case MIDDLE:
-                [self setOverlaps:YES];
-                break;
-            case BOTTOM:
+            case UIControlContentVerticalAlignmentBottom:
                 [self.imageViewForIcon setFrame:CGRectMake(0.0, 0.0, self.bounds.size.width, self.bounds.size.height-self.labelForButton.frame.size.height)];
+                break;
+            default:
+                [self setOverlaps:YES];
                 break;
         }
     }
@@ -295,9 +339,13 @@
     
     // DEFAULTS //
     
+    [self setContentModeForIcon:DEFAULT_CONTENT_MODE];
     [self setOverlaps:DEFAULT_OVERLAPS];
     [self setHorizontalAlignment:DEFAULT_HORIZONTAL_ALIGNMENT];
     [self setVerticalAlignment:DEFAULT_VERTICAL_ALIGNMENT];
+    [self setAdjustsFontSizeToFitWidth:DEFAULT_ADJUSTSFONTSIZETOFITWIDTH];
+    [self setMinimumScaleFactorForLabel:DEFAULT_MINIMUM_SCALE_FACTOR];
+    [self setNumberOfLinesForLabel:DEFAULT_NUMBEROFLINES];
     
     // VIEW HIERARCHY //
     
@@ -308,6 +356,7 @@
     // OTHER //
     
     [self setText:@"" forButton:self];
+    [self setClipsToBounds:YES];
 }
 
 - (void)teardown
