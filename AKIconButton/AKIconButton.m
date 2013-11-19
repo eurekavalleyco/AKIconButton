@@ -19,7 +19,7 @@
 #define DEFAULT_TEXT_COLOR self.currentTitleColor
 #define DEFAULT_FONT self.titleLabel.font
 #define DEFAULT_ICON self.imageView.image
-#define DEFAULT_CONTENT_MODE UIViewContentModeScaleAspectFit
+#define DEFAULT_CONTENT_MODE UIViewContentModeCenter
 #define DEFAULT_OVERLAPS NO
 #define DEFAULT_HORIZONTAL_ALIGNMENT self.contentHorizontalAlignment
 #define DEFAULT_VERTICAL_ALIGNMENT self.contentVerticalAlignment
