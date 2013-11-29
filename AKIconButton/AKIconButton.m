@@ -12,6 +12,7 @@
 
 #import "AKIconButton.h"
 #import "AKDebuggerRules_AKIconButton.h"
+#import "NSObject+Generics.h"
 
 #pragma mark - // DEFINITIONS (Private) //
 
@@ -32,8 +33,6 @@
 @property (nonatomic, strong) UIImageView *imageViewForIcon;
 - (void)setup;
 - (void)teardown;
-- (void)setText:(NSString *)text forButton:(UIButton *)button;
-- (void)setImage:(UIImage *)image forButton:(UIButton *)button;
 @end
 
 @implementation AKIconButton
@@ -362,30 +361,6 @@
 - (void)teardown
 {
     if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
-}
-
-- (void)setText:(NSString *)text forButton:(UIButton *)button
-{
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    if (button)
-    {
-        [button setTitle:text forState:UIControlStateNormal];
-        [button setTitle:text forState:UIControlStateSelected];
-        [button setTitle:text forState:UIControlStateHighlighted];
-    }
-}
-
-- (void)setImage:(UIImage *)image forButton:(UIButton *)button
-{
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    if (button)
-    {
-        [button setImage:image forState:UIControlStateNormal];
-        [button setImage:image forState:UIControlStateSelected];
-        [button setImage:image forState:UIControlStateHighlighted];
-    }
 }
 
 @end
