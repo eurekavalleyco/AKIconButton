@@ -11,7 +11,7 @@
 #pragma mark - // IMPORTS (Private) //
 
 #import "AKIconButtonViewController.h"
-#import "AKDebuggerRules_AKIconButton.h"
+#import "AKDebugger.h"
 #import "AKIconButton.h"
 
 #pragma mark - // DEFINITIONS (Private) //

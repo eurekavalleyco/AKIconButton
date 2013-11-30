@@ -26,6 +26,7 @@
 		7D3D48AA18342C08003DBAE6 /* AKDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D48A918342C08003DBAE6 /* AKDebugger.m */; };
 		7D3D48AE18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D48AD18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m */; };
 		7D3D48B118342E5F003DBAE6 /* AKIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D48B018342E5F003DBAE6 /* AKIconButton.m */; };
+		7D89478C1849BF3900016237 /* NSObject+Generics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D89478B1849BF3900016237 /* NSObject+Generics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		7D3D48AD18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKDebuggerRules_AKIconButton.m; sourceTree = "<group>"; };
 		7D3D48AF18342E5F003DBAE6 /* AKIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKIconButton.h; sourceTree = "<group>"; };
 		7D3D48B018342E5F003DBAE6 /* AKIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKIconButton.m; sourceTree = "<group>"; };
+		7D89478A1849BF3900016237 /* NSObject+Generics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Generics.h"; path = "../../AKSuperViewController/AKSuperViewController/NSObject+Generics.h"; sourceTree = "<group>"; };
+		7D89478B1849BF3900016237 /* NSObject+Generics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Generics.m"; path = "../../AKSuperViewController/AKSuperViewController/NSObject+Generics.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3D48AB18342C0D003DBAE6 /* AKDebugger */,
+				7D89478D1849BF3D00016237 /* NSObject+Generics */,
 				7D3D488218342BFA003DBAE6 /* AKIconButtonAppDelegate.h */,
 				7D3D488318342BFA003DBAE6 /* AKIconButtonAppDelegate.m */,
 				7D3D488518342BFA003DBAE6 /* Main.storyboard */,
@@ -187,6 +191,15 @@
 				1FA247FE183BD28B00351015 /* checkboxChecked@2x.png */,
 			);
 			name = "Example Icons";
+			sourceTree = "<group>";
+		};
+		7D89478D1849BF3D00016237 /* NSObject+Generics */ = {
+			isa = PBXGroup;
+			children = (
+				7D89478A1849BF3900016237 /* NSObject+Generics.h */,
+				7D89478B1849BF3900016237 /* NSObject+Generics.m */,
+			);
+			name = "NSObject+Generics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +307,7 @@
 				7D3D48AE18342C1B003DBAE6 /* AKDebuggerRules_AKIconButton.m in Sources */,
 				7D3D488418342BFA003DBAE6 /* AKIconButtonAppDelegate.m in Sources */,
 				7D3D48B118342E5F003DBAE6 /* AKIconButton.m in Sources */,
+				7D89478C1849BF3900016237 /* NSObject+Generics.m in Sources */,
 				7D3D488A18342BFA003DBAE6 /* AKIconButtonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

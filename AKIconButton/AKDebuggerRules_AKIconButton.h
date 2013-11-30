@@ -17,8 +17,6 @@
 
 #pragma mark - // DEFINITIONS (Public) //
 
-#define RULES_CLASS NSClassFromString(@"AKDebuggerRules_AKIconButton")
-
 @interface AKDebuggerRules_AKIconButton : NSObject <AKDebuggerRules>
 
 // RULES (General) //
