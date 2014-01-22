@@ -12,7 +12,7 @@
 
 #import "AKIconButton.h"
 #import "AKDebugger.h"
-#import "NSObject+Generics.h"
+#import "AKGenerics.h"
 
 #pragma mark - // DEFINITIONS (Private) //
 
@@ -354,7 +354,7 @@
     
     // OTHER //
     
-    [self setText:@"" forButton:self];
+    [AKGenerics setText:@"" forButton:self];
     [self setClipsToBounds:YES];
 }
 
