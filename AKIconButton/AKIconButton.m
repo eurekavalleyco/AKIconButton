@@ -55,7 +55,7 @@
 
 - (void)setText:(NSString *)text
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (![_text isEqualToString:text])
     {
@@ -67,7 +67,7 @@
 
 - (NSString *)text
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKGetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
     
     if (!_text) _text = DEFAULT_TEXT;
     return _text;
@@ -75,7 +75,7 @@
 
 - (void)setTextColor:(UIColor *)textColor
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (![_textColor isEqual:textColor])
     {
@@ -86,7 +86,7 @@
 
 - (UIColor *)textColor
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKGetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
     
     if (!_textColor) _textColor = DEFAULT_TEXT_COLOR;
     return _textColor;
@@ -94,7 +94,7 @@
 
 - (void)setFontForText:(UIFont *)fontForText
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (![_fontForText isEqual:fontForText])
     {
@@ -106,7 +106,7 @@
 
 - (UIFont *)fontForText
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKGetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
     
     if (!_fontForText) _fontForText = DEFAULT_FONT;
     return _fontForText;
@@ -114,7 +114,7 @@
 
 - (void)setIcon:(UIImage *)icon
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     _icon = icon;
     [self.imageViewForIcon setImage:icon];
@@ -122,7 +122,7 @@
 
 - (UIImage *)icon
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKGetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
     
     if (!_icon) _icon = DEFAULT_ICON;
     return _icon;
@@ -130,7 +130,7 @@
 
 - (void)setContentModeForIcon:(UIViewContentMode)contentModeForIcon
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (self.imageViewForIcon.contentMode != contentModeForIcon)
     {
@@ -141,7 +141,7 @@
 
 - (void)setOverlaps:(BOOL)overlaps
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (_overlaps != overlaps)
     {
@@ -152,7 +152,7 @@
 
 - (void)setHorizontalAlignment:(UIControlContentHorizontalAlignment)horizontalAlignment
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (_horizontalAlignment != horizontalAlignment)
     {
@@ -163,7 +163,7 @@
 
 - (void)setVerticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (_verticalAlignment != verticalAlignment)
     {
@@ -174,7 +174,7 @@
 
 - (void)setAdjustsFontSizeToFitWidth:(BOOL)adjustsFontSizeToFitWidth
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (_adjustsFontSizeToFitWidth != adjustsFontSizeToFitWidth)
     {
@@ -185,7 +185,7 @@
 
 - (void)setMinimumScaleFactorForLabel:(CGFloat)minimumScaleFactorForLabel
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (_minimumScaleFactorForLabel != minimumScaleFactorForLabel)
     {
@@ -197,7 +197,7 @@
 
 - (void)setNumberOfLinesForLabel:(NSInteger)numberOfLinesForLabel
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     if (_numberOfLinesForLabel != numberOfLinesForLabel)
     {
@@ -209,7 +209,7 @@
 
 - (UILabel *)labelForButton
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKGetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
     
     if (!_labelForButton)
     {
@@ -225,7 +225,7 @@
 
 - (UIImageView *)imageViewForIcon
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKGetter rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
     
     if (!_imageViewForIcon)
     {
@@ -240,7 +240,7 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     self = [super initWithFrame:frame];
     if (self)
@@ -252,7 +252,7 @@
 
 - (void)awakeFromNib
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     [super awakeFromNib];
     [self setup];
@@ -260,7 +260,7 @@
 
 - (void)dealloc
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     [self teardown];
 }
@@ -273,7 +273,7 @@
 
 - (void)layoutSubviews
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKUnspecified rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeUnspecified message:nil];
     
     if (![self.subviews containsObject:self.imageViewForIcon]) [self addSubview:self.imageViewForIcon];
     if (![self.subviews containsObject:self.labelForButton]) [self addSubview:self.labelForButton];
@@ -334,7 +334,7 @@
 
 - (void)setup
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
     
     // DEFAULTS //
     
@@ -360,7 +360,7 @@
 
 - (void)teardown
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) MyLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
 }
 
 @end
