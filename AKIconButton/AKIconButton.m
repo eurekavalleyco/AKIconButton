@@ -55,7 +55,7 @@
 
 - (void)setText:(NSString *)text
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (![_text isEqualToString:text])
     {
@@ -67,7 +67,7 @@
 
 - (NSString *)text
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter customCategory:nil message:nil];
     
     if (!_text) _text = DEFAULT_TEXT;
     return _text;
@@ -75,7 +75,7 @@
 
 - (void)setTextColor:(UIColor *)textColor
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (![_textColor isEqual:textColor])
     {
@@ -86,7 +86,7 @@
 
 - (UIColor *)textColor
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter customCategory:nil message:nil];
     
     if (!_textColor) _textColor = DEFAULT_TEXT_COLOR;
     return _textColor;
@@ -94,7 +94,7 @@
 
 - (void)setFontForText:(UIFont *)fontForText
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (![_fontForText isEqual:fontForText])
     {
@@ -106,7 +106,7 @@
 
 - (UIFont *)fontForText
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter customCategory:nil message:nil];
     
     if (!_fontForText) _fontForText = DEFAULT_FONT;
     return _fontForText;
@@ -114,7 +114,7 @@
 
 - (void)setIcon:(UIImage *)icon
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     _icon = icon;
     [self.imageViewForIcon setImage:icon];
@@ -122,7 +122,7 @@
 
 - (UIImage *)icon
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter customCategory:nil message:nil];
     
     if (!_icon) _icon = DEFAULT_ICON;
     return _icon;
@@ -130,7 +130,7 @@
 
 - (void)setContentModeForIcon:(UIViewContentMode)contentModeForIcon
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (self.imageViewForIcon.contentMode != contentModeForIcon)
     {
@@ -141,7 +141,7 @@
 
 - (void)setOverlaps:(BOOL)overlaps
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (_overlaps != overlaps)
     {
@@ -152,7 +152,7 @@
 
 - (void)setHorizontalAlignment:(UIControlContentHorizontalAlignment)horizontalAlignment
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (_horizontalAlignment != horizontalAlignment)
     {
@@ -163,7 +163,7 @@
 
 - (void)setVerticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (_verticalAlignment != verticalAlignment)
     {
@@ -174,7 +174,7 @@
 
 - (void)setAdjustsFontSizeToFitWidth:(BOOL)adjustsFontSizeToFitWidth
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (_adjustsFontSizeToFitWidth != adjustsFontSizeToFitWidth)
     {
@@ -185,7 +185,7 @@
 
 - (void)setMinimumScaleFactorForLabel:(CGFloat)minimumScaleFactorForLabel
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (_minimumScaleFactorForLabel != minimumScaleFactorForLabel)
     {
@@ -197,7 +197,7 @@
 
 - (void)setNumberOfLinesForLabel:(NSInteger)numberOfLinesForLabel
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     if (_numberOfLinesForLabel != numberOfLinesForLabel)
     {
@@ -209,7 +209,7 @@
 
 - (UILabel *)labelForButton
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter customCategory:nil message:nil];
     
     if (!_labelForButton)
     {
@@ -225,7 +225,7 @@
 
 - (UIImageView *)imageViewForIcon
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter customCategory:nil message:nil];
     
     if (!_imageViewForIcon)
     {
@@ -240,7 +240,7 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     self = [super initWithFrame:frame];
     if (self)
@@ -252,7 +252,7 @@
 
 - (void)awakeFromNib
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     [super awakeFromNib];
     [self setup];
@@ -260,7 +260,7 @@
 
 - (void)dealloc
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     [self teardown];
 }
@@ -273,7 +273,7 @@
 
 - (void)layoutSubviews
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeUnspecified message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeUnspecified customCategory:nil message:nil];
     
     if (![self.subviews containsObject:self.imageViewForIcon]) [self addSubview:self.imageViewForIcon];
     if (![self.subviews containsObject:self.labelForButton]) [self addSubview:self.labelForButton];
@@ -334,7 +334,7 @@
 
 - (void)setup
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
     
     // DEFAULTS //
     
@@ -360,7 +360,7 @@
 
 - (void)teardown
 {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup message:nil];
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategory:nil message:nil];
 }
 
 @end
