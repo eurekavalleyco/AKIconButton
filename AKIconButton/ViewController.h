@@ -1,5 +1,5 @@
 //
-//  AKIconButtonAppDelegate.h
+//  ViewController.h
 //  AKIconButton
 //
 //  Created by Ken M. Haggerty on 11/13/13.
@@ -16,6 +16,5 @@
 
 #pragma mark - // DEFINITIONS (Public) //
 
-@interface AKIconButtonAppDelegate : UIResponder <UIApplicationDelegate>
-@property (strong, nonatomic) UIWindow *window;
+@interface ViewController : UIViewController
 @end

@@ -10,33 +10,57 @@
 	<string>AKIconButton</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>763AB95A-B718-4DB1-AE79-B59A12910B31</key>
+		<key>15F5F546F4BDCDD1EA8F278CE7ECBCE5096EB8CA</key>
 		<string>https://bitbucket.org/eurekavalleyco/akiconbutton.git</string>
-		<key>79F9CF82-215A-4989-B8E2-556A6CCAEA06</key>
+		<key>180AEB9035F8B2E3D53D07BA453CBB1CF1D26099</key>
+		<string>https://github.com/eurekavalleyco/AKDebugger.git</string>
+		<key>EE2149F46CE9D12EEED852BC5841F1EB9896945C</key>
 		<string>https://bitbucket.org/eurekavalleyco/aksuperviewcontroller.git</string>
+		<key>FC7EB595F0165B4E071792DDEF137676A766E0F2</key>
+		<string>https://github.com/eurekavalleyco/AKGenerics.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>AKIconButton.xcodeproj/project.xcworkspace</string>
+	<string>AKIconButton.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>763AB95A-B718-4DB1-AE79-B59A12910B31</key>
+		<key>15F5F546F4BDCDD1EA8F278CE7ECBCE5096EB8CA</key>
 		<string>../..</string>
-		<key>79F9CF82-215A-4989-B8E2-556A6CCAEA06</key>
+		<key>180AEB9035F8B2E3D53D07BA453CBB1CF1D26099</key>
+		<string>../../../AKDebugger</string>
+		<key>EE2149F46CE9D12EEED852BC5841F1EB9896945C</key>
 		<string>../../../AKSuperViewController</string>
+		<key>FC7EB595F0165B4E071792DDEF137676A766E0F2</key>
+		<string>../../../AKGenerics</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://bitbucket.org/eurekavalleyco/akiconbutton.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>763AB95A-B718-4DB1-AE79-B59A12910B31</string>
+	<string>15F5F546F4BDCDD1EA8F278CE7ECBCE5096EB8CA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>763AB95A-B718-4DB1-AE79-B59A12910B31</string>
+			<string>180AEB9035F8B2E3D53D07BA453CBB1CF1D26099</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AKDebugger</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC7EB595F0165B4E071792DDEF137676A766E0F2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AKGenerics</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>15F5F546F4BDCDD1EA8F278CE7ECBCE5096EB8CA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AKIconButton</string>
 		</dict>
@@ -44,7 +68,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>79F9CF82-215A-4989-B8E2-556A6CCAEA06</string>
+			<string>EE2149F46CE9D12EEED852BC5841F1EB9896945C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AKSuperViewController</string>
 		</dict>
