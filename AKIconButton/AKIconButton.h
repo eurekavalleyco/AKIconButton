@@ -16,19 +16,6 @@
 
 #pragma mark - // DEFINITIONS (Public) //
 
-//typedef enum {
-//    LEFT = 1,
-//    CENTER,
-//    RIGHT,
-//    JUSTIFIED
-//} AKHorizontalAlignment;
-//
-//typedef enum {
-//    TOP = 1,
-//    MIDDLE,
-//    BOTTOM
-//} AKVerticalAlignment;
-
 @interface AKIconButton : UIButton
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) UIColor *textColor;
