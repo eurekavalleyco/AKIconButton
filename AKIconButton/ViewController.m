@@ -1,5 +1,5 @@
 //
-//  AKIconButtonViewController.m
+//  ViewController.m
 //  AKIconButton
 //
 //  Created by Ken M. Haggerty on 11/13/13.
@@ -10,8 +10,9 @@
 
 #pragma mark - // IMPORTS (Private) //
 
-#import "AKIconButtonViewController.h"
+#import "ViewController.h"
 #import "AKDebugger.h"
+#import "AKGenerics.h"
 #import "AKIconButton.h"
 
 #pragma mark - // DEFINITIONS (Private) //
@@ -20,7 +21,7 @@
 #define TEXT_COLOR [UIColor whiteColor]
 #define OVERLAPS NO
 
-@interface AKIconButtonViewController ()
+@interface ViewController ()
 @property (nonatomic, strong) IBOutlet AKIconButton *topLeft;
 @property (nonatomic, strong) IBOutlet AKIconButton *topCenter;
 @property (nonatomic, strong) IBOutlet AKIconButton *topRight;
@@ -34,11 +35,11 @@
 - (void)teardown;
 @end
 
-@interface AKIconButtonViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation AKIconButtonViewController
+@implementation ViewController
 
 #pragma mark - // SETTERS AND GETTERS //
 
@@ -46,19 +47,21 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
+    if (!self)
     {
-        [self setup];
+        [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeCritical methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:[NSString stringWithFormat:@"Could not initialize %@", stringFromVariable(self)]];
+        return nil;
     }
+    [self setup];
     return self;
 }
 
 - (void)awakeFromNib
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
     
     [super awakeFromNib];
     [self setup];
@@ -66,15 +69,14 @@
 
 - (void)viewDidLoad
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
     
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
     
     [super viewWillAppear:animated];
     
@@ -108,29 +110,30 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
     
     [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
     
     [super viewWillDisappear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
     
     [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning
 {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - // PUBLIC METHODS //
@@ -143,12 +146,12 @@
 
 - (void)setup
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
 }
 
 - (void)teardown
 {
-    if ([AKDebugger printForMethod:METHOD_NAME logType:AKMethodName methodType:AKSetup rules:RULES_CLASS]) NSLog(@"%s", __PRETTY_FUNCTION__);
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup customCategories:@[AKD_UI] message:nil];
 }
 
 @end
