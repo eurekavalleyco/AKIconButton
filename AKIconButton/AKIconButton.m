@@ -355,7 +355,6 @@
     
     // OTHER //
     
-    [AKGenerics setText:@"" forButton:self];
     [self setClipsToBounds:YES];
 }
 
